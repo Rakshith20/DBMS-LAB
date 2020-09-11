@@ -1,0 +1,30 @@
+**Schema (MySQL v5.7)**
+
+    create table BOOK(Book_ID integer primary key,Title varchar(20),Publisher_Name varchar(20),Pub_Year integer);
+    insert into BOOK values(10,'DBMS','SKFHHF',2020);
+    insert into BOOK values(20,'ADP','OLIJSG',2019);
+    insert into BOOK values(30,'PHYSICS','ABCDD',2020);
+    insert into BOOK values(40,'KANNADA','QWERTY',2016);
+    insert into BOOK values(50,'SANSKRITH','ASDFG',2011);
+    insert into BOOK values(60,'CES','JUSFSD',2000);
+    create table BOOK_COPIES(Book_ID integer,Branch_ID integer,No_of_Copies integer,primary key(Book_ID,Branch_ID));
+    insert into BOOK_COPIES values(2001,201,10);
+
+---
+
+**Query #1**
+
+    select * from BOOK;
+
+| Book_ID | Title     | Publisher_Name | Pub_Year |
+| ------- | --------- | -------------- | -------- |
+| 10      | DBMS      | SKFHHF         | 2020     |
+| 20      | ADP       | OLIJSG         | 2019     |
+| 30      | PHYSICS   | ABCDD          | 2020     |
+| 40      | KANNADA   | QWERTY         | 2016     |
+| 50      | SANSKRITH | ASDFG          | 2011     |
+| 60      | CES       | JUSFSD         | 2000     |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/)
